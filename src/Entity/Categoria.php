@@ -31,7 +31,7 @@ class Categoria
 
     public function __ToString()
     {
-        return $this->id;
+        return sprintf('(%u) - %s', $this->id, $this->nombre);
     }
 
     public function __construct()
