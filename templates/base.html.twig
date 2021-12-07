@@ -2,6 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="theme-color" content="#763626">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
@@ -12,6 +14,9 @@
         {% block javascripts %}
             {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
+
+        {#<link rel="stylesheet" href="{{ asset('static/css/bootstrap.min.css') }}">#}
+        <link rel="stylesheet" href="{{ asset('static/css/global.css') }}">
     </head>
     <body>
         {% block body %}{% endblock %}

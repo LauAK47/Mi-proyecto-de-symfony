@@ -3,11 +3,24 @@
 {% block title %}Edit Producto{% endblock %}
 
 {% block body %}
-    <h1>Edit Producto</h1>
+    
+    <body class="producto">
+    
+    <div style="background-color: #2A3132; margin-left: 15px; margin-right: 1000px;border: PowderBlue 5px; border-radius: 10px; height:425px;">
+    <h1 style="font-size:26px; padding-top: 13px; margin-left:60px; text-shadow: 2px 3px #763626;">Editar producto</h1>
+    
+    {{ include('producto/_form.html.twig', {'button_label': 'Guardar'}) }}
 
-    {{ include('producto/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('producto_index') }}">back to list</a>
-
+    <div style="margin-left:100px; padding-top:7px;">
+    <a href="{{ path('producto_index') }}">volver a la lista</a>
+    </div>
+    
+    <div style="padding-top: 10px; margin-left: -93px;">
     {{ include('producto/_delete_form.html.twig') }}
+    </div>
+
+    </div>
+    
+    </body>
+  
 {% endblock %}

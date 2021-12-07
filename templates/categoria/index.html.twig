@@ -3,14 +3,22 @@
 {% block title %}Categoria index{% endblock %}
 
 {% block body %}
-    <h1>Categoria index</h1>
+    <div style="background-color: #2A3132; height: 25px;">
+    <a href="/muestra">Inicio</a>
+    <a href="/producto">Productos</a>
+    </div>
+    
+    <body class="categoria">
+    <div style="text-align: center; background-color: #2A3132; margin-left: 136px; margin-right: 136px; height: 50px; padding-bottom: 10px">
+    <h1 style="text-align:center; text-shadow: 2px 3px #763626;">Categorias</h1>
+    </div>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Nombre</th>
-                <th>actions</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -19,8 +27,8 @@
                 <td>{{ categorium.id }}</td>
                 <td>{{ categorium.nombre }}</td>
                 <td>
-                    <a href="{{ path('categoria_show', {'id': categorium.id}) }}">show</a>
-                    <a href="{{ path('categoria_edit', {'id': categorium.id}) }}">edit</a>
+                    <a href="{{ path('categoria_show', {'id': categorium.id}) }}">mostrar</a>
+                    <a href="{{ path('categoria_edit', {'id': categorium.id}) }}">editar</a>
                 </td>
             </tr>
         {% else %}
@@ -30,6 +38,10 @@
         {% endfor %}
         </tbody>
     </table>
+    
+    <div style="text-align: center; background-color: #2A3132; margin-left: 136px; margin-right: 136px; margin-bottom: 20px;height: 25px;">
+    <a href="{{ path('categoria_new') }}">Nueva categoria</a>
+    </div>
 
-    <a href="{{ path('categoria_new') }}">Create new</a>
+    </body>
 {% endblock %}

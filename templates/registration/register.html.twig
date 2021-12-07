@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+<nav style="background-color: #2A3132; height: 25px;">
+    <a href="/muestra">Inicio</a>
+    <a href="/producto">Producto</a>
+    <a href="/categoria">Categorias</a>
+</nav>
+    <body class="muestra">
+    <h1>Registrarse</h1>
+
+    {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.username, {
+            label: 'Usuario'
+        }) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Contraseña'
+        }) }}
+        {{ form_row(registrationForm.agreeTerms, {
+            label: 'Acepto los terminos y condiciones'
+        }) }}
+
+        <button type="submit" class="btn">Registrarse</button>
+    {{ form_end(registrationForm) }}
+    </body>
+{% endblock %}

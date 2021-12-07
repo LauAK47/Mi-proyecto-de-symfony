@@ -3,36 +3,42 @@
 {% block title %}Producto{% endblock %}
 
 {% block body %}
-    <h1>Producto</h1>
+    <body class="producto">
+    <div style="text-align: center; background-color: #2A3132; margin-left: 136px; margin-right: 136px; height: 55px; padding-bottom: 10px">
+    <h1 style="text-align:center; text-shadow: 2px 3px #763626;">Producto</h1>
+    </div>
 
     <table class="table">
-        <tbody>
+        <thead>
             <tr>
                 <th>Id</th>
-                <td>{{ producto.id }}</td>
-            </tr>
-            <tr>
                 <th>Categoria</th>
-                <td>{{ producto.categoria }}</td>
-            </tr>
-            <tr>
                 <th>Nombre</th>
-                <td>{{ producto.nombre }}</td>
-            </tr>
-            <tr>
                 <th>Precio</th>
-                <td>{{ producto.precio }}</td>
-            </tr>
-            <tr>
                 <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="font-size: 15px;">
+                <td>{{ producto.id }}</td>
+                <td>{{ producto.categoria }}</td>
+                <td>{{ producto.nombre }}</td>
+                <td>$ {{ producto.precio }}</td>
                 <td>{{ producto.stock }}</td>
             </tr>
         </tbody>
     </table>
+    
+    <div style="text-align: center; background-color: #2A3132; margin-left: 136px; margin-right: 136px; padding-top: 5px; padding-bottom: 5px;">
+    <a href="{{ path('producto_edit', {'id': producto.id}) }}">editar</a>
+    </div>
+    <div style="text-align: center; background-color: #2A3132; margin-left: 136px; margin-right: 136px; margin-bottom: 20px; height: 27px;">
+    <a href="{{ path('producto_index') }}">volver a la lista</a>
+    </div>
 
-    <a href="{{ path('producto_index') }}">back to list</a>
-
-    <a href="{{ path('producto_edit', {'id': producto.id}) }}">edit</a>
-
+    <div style="margin-left: 430px; margin-top: -17px;">
     {{ include('producto/_delete_form.html.twig') }}
+    </div>
+
+    </body>
 {% endblock %}

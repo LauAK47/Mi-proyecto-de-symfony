@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Muestra - Inicio{% endblock %}
+
+{% block body %}
+
+<body class="muestra">
+
+<header>
+
+</header>
+
+<main>
+
+<div style="background-color: #2A3132; margin-left: 20px; width: 25%; height: 600px; border: PowderBlue 5px; border-radius: 10px;">
+     
+    <h1 style="text-align:center ; font-size: 25px; margin-bottom: 40px; padding-top:20px; text-shadow: 2px 3px #763626;">Almacen Virtual</h1>
+
+    <h2 style="text-align:center ; font-size: 20px; text-shadow: 2px 3px #763626;">Menú</h2>
+     
+    <div style="background-color: #763626; margin: 10px 10px; border: PowderBlue 5px; border-radius: 10px; height: 300px;">
+    <ul style="font-size:15px;color:white;">
+        <li style="margin-left: -10px; margin-top: 5px; padding-top: 5px;">Gestionar productos: <a href="/producto">Productos✅</a></li>
+        <li style="margin-left: -10px; margin-top: 5px;">Gestionar categorias: <a href="/categoria">Categorias✅</a></li>
+        <li style="margin-left: -10px; margin-top: 5px;">Crear cuenta: <a href="/register">Registrarse✅</a></li>
+        <li style="margin-left: -10px; margin-top: 5px;">Ingresar a la cuenta: <a href="/login">Ingresar✅</a></li>
+    </ul>
+    </div>
+
+</div>
+
+</main>
+
+<footer>
+
+</footer>
+
+</body>
+
+{% endblock %}

@@ -3,9 +3,19 @@
 {% block title %}New Categoria{% endblock %}
 
 {% block body %}
-    <h1>Create new Categoria</h1>
+
+    <body class="categoria">
+    
+    <div style="background-color: #2A3132; margin-left: 15px; margin-right: 1000px;border: PowderBlue 5px; border-radius: 10px; height:246px;">
+    <h1 style="font-size:26px; padding-top: 13px; margin-left:8px; text-shadow: 2px 3px #763626;">Agregar nueva categoria</h1>
 
     {{ include('categoria/_form.html.twig') }}
+    
+    <div style="margin-left:100px; padding-top:7px;">
+    <a href="{{ path('categoria_index') }}">volver a la lista</a>
+    </div>
 
-    <a href="{{ path('categoria_index') }}">back to list</a>
+    </div>
+
+    </body>
 {% endblock %}

@@ -3,9 +3,20 @@
 {% block title %}New Producto{% endblock %}
 
 {% block body %}
-    <h1>Create new Producto</h1>
+     
+    <body class="producto">
+    
+    <div style="background-color: #2A3132; margin-left: 15px; margin-right: 1000px;border: PowderBlue 5px; border-radius: 10px; height:425px;">
+    <h1 style="font-size:26px; padding-top: 13px; margin-left:9px; text-shadow: 2px 3px #763626;">Agregar nuevo producto</h1>
+
 
     {{ include('producto/_form.html.twig') }}
+    
+    <div style="margin-left:100px; padding-top:7px;">
+    <a href="{{ path('producto_index') }}"">volver a la lista</a>
+    </div>
 
-    <a href="{{ path('producto_index') }}">back to list</a>
+    </div>
+
+  </body>
 {% endblock %}
